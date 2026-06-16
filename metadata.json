@@ -1,0 +1,7 @@
+{
+  "name": "Buzos de Egresados",
+  "description": "Página de venta de buzos de egresados, con galería de fotos, preguntas frecuentes y redes sociales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
