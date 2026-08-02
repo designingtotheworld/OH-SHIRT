@@ -1,1 +1,13 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@theme {
+  --font-anton: "Anton", sans-serif;
+  --font-condensed: "Anton", sans-serif;
+  --font-handmade: "Anton", sans-serif;
+}
+
+body {
+  font-family: var(--font-anton);
+}
+
