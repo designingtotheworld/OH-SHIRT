@@ -64,18 +64,54 @@ export const faqCategories: FAQCategory[] = [
           "Cuello tortuga (con un diseño de cuello alto y abrigado).",
           "Modelos en tendencia: Si tenés en mente algún corte o formato que esté de moda en este momento (como los cortes tipo foxie fit u otros), ¡consultanos! Si está disponible, lo podemos armar para tu curso."
         ]
+      },
+      {
+        id: "dis-3",
+        question: "¿Hacen bordados en las prendas?",
+        answer: "Generalmente no realizamos bordados tradicionales. Actualmente utilizamos técnicas avanzadas de estampa que simulan el estilo del bordado con una terminación excelente. Esto nos permite ofrecer opciones mucho más cómodas (¡no pican ni raspan en el interior de la prenda!), más livianas y considerablemente más económicas para los egresados.",
+        extraNote: "💡 De todas formas, si tu curso tiene una idea muy particular o específica en mente, ¡podemos evaluar la posibilidad!"
+      },
+      {
+        id: "dis-4",
+        question: "¿Se puede enviar un diseño propio o boceto hecho por los chicos?",
+        answer: "¡Sí, totalmente! Si los chicos o la comisión del curso armaron su propio boceto, idea o dibujo, nos lo pueden enviar sin problema. Nosotros nos encargamos de adaptarlo, digitalizarlo y prepararlo para que quede con excelente calidad en la estampa de la prenda."
+      },
+      {
+        id: "dis-5",
+        question: "¿Podemos combinar el color de tela de un modelo con la estampa de otro?",
+        answer: "¡Sí, exactamente! Todos nuestros diseños son 100% personalizables. Podés elegir la estampa que más te guste de un modelo y combinarla libremente con los colores de tela o corte de cualquier otro. Armamos la propuesta a la medida justa de lo que busque el curso."
+      },
+      {
+        id: "dis-6",
+        question: "¿Pueden pedir algunos chicos campera y otros buzo?",
+        answer: "¡Sí, totalmente! Dentro del mismo pedido del curso, cada alumno puede elegir el formato que le resulte más cómodo (campera con cierre o buzo canguro), manteniendo la misma línea de diseño, colores y estampas para todo el grupo."
       }
     ]
   },
   {
     id: "tiempos",
-    category: "3. Pedidos y Tiempos de Entrega",
+    category: "3. Pedidos, Ubicación y Entrega",
     iconName: "Clock",
     items: [
       {
         id: "tie-1",
         question: "¿Cuánto tiempo se demora la entrega?",
         answer: "El proceso de confección comienza una vez que se entregan completas las planillas (nombres, apodos y talles) junto con el comprobante del pago inicial. Generalmente estimamos un plazo de tres meses, aunque en muchos casos el pedido puede estar listo antes."
+      },
+      {
+        id: "tie-2",
+        question: "¿Dónde están ubicados y hacen envíos?",
+        answer: "Estamos ubicados en Zona Norte, Escobar. Realizamos envíos a todo el país para que tu curso pueda recibir sus buzos en cualquier punto de Argentina."
+      },
+      {
+        id: "tie-3",
+        question: "¿Dónde se pueden ver los buzos y comprobar la calidad?",
+        answer: "No contamos con un showroom abierto al público general. Sin embargo, si están cerca de la zona podemos coordinar un punto de encuentro en común y llevarles muestras para que las vean en persona. También ofrecemos realizar una reunión virtual (Zoom) en donde van a poder ver la calidad de las prendas en vivo y sacarse todas las dudas en directo."
+      },
+      {
+        id: "tie-4",
+        question: "¿Qué pasa si entra un alumno nuevo al curso? (Nuevos ingresos)",
+        answer: "¡Se lo hacemos igual! Si se incorpora un compañero nuevo al curso después de haber cerrado el pedido, le confeccionamos la prenda con el mismo diseño del grupo al precio actualizado al momento de solicitarlo."
       }
     ]
   },
@@ -101,7 +137,7 @@ export const faqCategories: FAQCategory[] = [
         question: "¿Cuáles son las formas de pago disponibles?",
         answer: "Se puede abonar de dos maneras:",
         bullets: [
-          "En un solo pago: Accediendo al valor promocional al contado.",
+          "En un solo pago: Accediendo al precio promocional en un solo pago.",
           "En dos cuotas: Divididas en meses consecutivos, las cuales cuentan con un recargo del 10%."
         ]
       },
@@ -117,6 +153,25 @@ export const faqCategories: FAQCategory[] = [
             "En dos cuotas: Al total del combo se le aplica el recargo del 10% (quedando en $16,5), dividido en dos cuotas mensuales consecutivas de $8.25."
           ]
         }
+      }
+    ]
+  },
+  {
+    id: "cuidado",
+    category: "6. Cuidado de las Prendas",
+    iconName: "Sparkles",
+    items: [
+      {
+        id: "cui-1",
+        question: "¿Cómo debemos lavar y cuidar las prendas para que la estampa y los colores duren intactos?",
+        answer: "¡Tratalas con amor para que te acompañen impecables durante todo el año! Para conservar los colores vivos y la calidad de la estampa, te recomendamos seguir estos consejos:",
+        bullets: [
+          "🌊 Lavar con agua fría y con la estampa hacia adentro (dada vuelta).",
+          "🌀 Ojo con el secarropa: Es súper cómodo, pero si lo usás mucho, el calor extremo podría resquebrajar la estampa y achicar un poco la prenda.",
+          "💨 ¿Planchar? ¡Nunca directo sobre la estampa!: Si planchás, usá baja temperatura y jamás pases la plancha sobre el estampado.",
+          "🧪 Lavandina... Mhmm, mejor no: Evitá blanqueadores o lavandina para no alterar los tonos de la tela.",
+          "☀️ Secado recomendado: Para mantener vivos los colores, no seques la prenda directo al sol. Y si lo hacés, siempre con la estampa hacia adentro."
+        ]
       }
     ]
   }

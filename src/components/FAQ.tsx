@@ -99,6 +99,12 @@ export function FAQ() {
                           </ul>
                         )}
 
+                        {item.extraNote && (
+                          <p className="mt-3 p-3 bg-neutral-900/80 border border-neutral-700/60 rounded-lg text-xs md:text-sm text-yellow-300 font-medium">
+                            {item.extraNote}
+                          </p>
+                        )}
+
                         {item.exampleBox && (
                           <div className="mt-4 p-4 bg-neutral-900 border border-yellow-700/50 rounded-xl space-y-2 text-neutral-200">
                             <div className="flex items-center gap-2 font-anton text-yellow-300 text-base uppercase tracking-wide">
@@ -130,3 +136,4 @@ export function FAQ() {
     </section>
   );
 }
+

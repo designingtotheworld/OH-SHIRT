@@ -11,3 +11,24 @@ body {
   font-family: var(--font-anton);
 }
 
+/* Custom yellow scrollbar for horizontal gallery strip */
+.yellow-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+.yellow-scrollbar::-webkit-scrollbar-track {
+  background: rgba(38, 38, 38, 0.8);
+  border-radius: 9999px;
+}
+.yellow-scrollbar::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border-radius: 9999px;
+  border: 2px solid rgba(23, 23, 23, 0.8);
+}
+.yellow-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #eab308;
+}
+.yellow-scrollbar {
+  scrollbar-color: #facc15 rgba(38, 38, 38, 0.8);
+  scrollbar-width: thin;
+}
+
