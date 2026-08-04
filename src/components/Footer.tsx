@@ -1,4 +1,4 @@
-import { Instagram, Globe, Star } from "lucide-react";
+import { Instagram, Star } from "lucide-react";
 
 export function Footer() {
   const links = [
@@ -7,12 +7,6 @@ export function Footer() {
       icon: Instagram,
       url: "https://www.instagram.com/ohshirt.argentina/",
       color: "hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white border-neutral-700",
-    },
-    {
-      name: "Sitio Web",
-      icon: Globe,
-      url: "https://www.ohshirt.com.ar",
-      color: "hover:bg-yellow-400 hover:text-black border-neutral-700",
     },
     {
       name: "Opiniones",
