@@ -284,6 +284,12 @@ const sampleModelsRemeras: ModelItem[] = [
     url: "https://i.imgur.com/kAZWggw.png",
     title: "Modelo 19 (Remera)",
     subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-20",
+    url: "https://i.imgur.com/sKNcDC0.jpeg",
+    title: "Modelo 20 (Remera)",
+    subtitle: "Remera Egresados"
   }
 ];
 
