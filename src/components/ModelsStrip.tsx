@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Maximize2, ChevronLeft, ChevronRight, X, Image as ImageIcon } from "lucide-react";
+import { Maximize2, ChevronLeft, ChevronRight, X, Image as ImageIcon, MessageCircle } from "lucide-react";
 
 export interface ModelItem {
   id: string;
@@ -93,6 +93,34 @@ const sampleModelsLisas: ModelItem[] = [
     id: "mod-10",
     url: "https://i.imgur.com/Q8Kzmf1.png",
     title: "Modelo 10",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-14",
+    url: "https://i.imgur.com/ErTnuyI.jpeg",
+    backUrl: "https://i.imgur.com/LOfCk9o.jpeg",
+    title: "Modelo 14",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-15",
+    url: "https://i.imgur.com/q6JBbdv.jpeg",
+    backUrl: "https://i.imgur.com/G14Pjij.jpeg",
+    title: "Modelo 15",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-16",
+    url: "https://i.imgur.com/07npsi2.jpeg",
+    backUrl: "https://i.imgur.com/K4QIz1W.jpeg",
+    title: "Modelo 16",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-17",
+    url: "https://i.imgur.com/t8mVaoH.jpeg",
+    backUrl: "https://i.imgur.com/KpMa5f5.jpeg",
+    title: "Modelo 17",
     subtitle: "Buzo Egresados (BASE LISA)"
   }
 ];
@@ -189,6 +217,72 @@ const sampleModelsRemeras: ModelItem[] = [
     id: "rem-8",
     url: "https://i.imgur.com/xQjVLwn.jpeg",
     title: "Modelo 8 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-9",
+    url: "https://i.imgur.com/7Z2OIpi.png",
+    title: "Modelo 9 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-10",
+    url: "https://i.imgur.com/nUq5Z4E.png",
+    title: "Modelo 10 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-11",
+    url: "https://i.imgur.com/QwVFo6I.png",
+    title: "Modelo 11 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-12",
+    url: "https://i.imgur.com/rehLgVC.png",
+    title: "Modelo 12 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-13",
+    url: "https://i.imgur.com/ywaUJFK.png",
+    title: "Modelo 13 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-14",
+    url: "https://i.imgur.com/YDMyaaN.png",
+    title: "Modelo 14 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-15",
+    url: "https://i.imgur.com/uybNydp.png",
+    title: "Modelo 15 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-16",
+    url: "https://i.imgur.com/SmWrt7G.png",
+    title: "Modelo 16 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-17",
+    url: "https://i.imgur.com/9CIQEjm.png",
+    title: "Modelo 17 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-18",
+    url: "https://i.imgur.com/opPyJdC.png",
+    title: "Modelo 18 (Remera)",
+    subtitle: "Remera Egresados"
+  },
+  {
+    id: "rem-19",
+    url: "https://i.imgur.com/kAZWggw.png",
+    title: "Modelo 19 (Remera)",
     subtitle: "Remera Egresados"
   }
 ];
@@ -344,22 +438,18 @@ function ModelStripSection({
           {/* Tarjeta Informativa / Placeholder al final de la tira */}
           <div
             className={`flex-none ${
-              placeholderWide ? "w-56 sm:w-64" : "w-32 sm:w-40 md:w-48"
-            } aspect-[3/4] rounded-xl border-2 border-dashed border-yellow-400/40 bg-neutral-900/60 flex flex-col items-center justify-center p-4 text-center text-neutral-400 snap-start`}
+              placeholderWide ? "w-56 sm:w-64" : "w-44 sm:w-52 md:w-56"
+            } aspect-[3/4] rounded-xl border-2 border-dashed border-yellow-400/50 bg-neutral-900/80 flex flex-col items-center justify-center p-4 text-center text-neutral-300 snap-start hover:border-yellow-400 transition-colors shadow-lg`}
           >
-            <ImageIcon className="w-8 h-8 mb-2 text-yellow-400 opacity-80" />
-            <span className="text-xs sm:text-sm font-anton uppercase text-yellow-400 tracking-wide">
-              {placeholderText}
+            <div className="w-10 h-10 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center mb-2">
+              <MessageCircle className="w-5 h-5 text-green-400" />
+            </div>
+            <span className="text-xs sm:text-sm font-anton uppercase text-yellow-400 tracking-wide leading-tight">
+              {placeholderText || "¿YA TENÉS UN MODELO?"}
             </span>
-            {placeholderDesc ? (
-              <p className="text-xs text-neutral-300 mt-1.5 font-sans leading-relaxed">
-                {placeholderDesc}
-              </p>
-            ) : (
-              <span className="text-[10px] text-neutral-500 mt-1 font-sans">
-                {badgeTitle}
-              </span>
-            )}
+            <p className="text-[11px] sm:text-xs text-neutral-200 mt-2 font-sans leading-snug">
+              {placeholderDesc || "Si ya tenés un modelo diseñado, envianos la foto al WhatsApp y lo hacemos."}
+            </p>
           </div>
         </div>
       </div>
@@ -418,11 +508,12 @@ export function ModelsStrip() {
 
         {/* TIRA 1: BASE LISA */}
         <ModelStripSection
-          badgeTitle="MODELOS BASE LISA"
+          badgeTitle="CAMPERA / BUZO BASE LISA"
           subtitle="Modelos de color liso en el cuerpo principal"
           models={sampleModelsLisas}
           onOpenLightbox={openLightbox}
-          placeholderText="¡Envíanos tus fotos!"
+          placeholderText="¿YA TENÉS TU MODELO?"
+          placeholderDesc="Si ya tenés un modelo diseñado, envianos la foto al WhatsApp y lo hacemos."
         />
 
         {/* TIRA 2: BASE COMBINADA */}
@@ -431,18 +522,19 @@ export function ModelsStrip() {
           subtitle="MODELOS COMBINADOS CON RECORTES O RAYAS/VIVOS"
           models={sampleModelsCombinadas}
           onOpenLightbox={openLightbox}
-          placeholderText="Tira Base Combinada"
-          placeholderDesc="Envíanos las fotos de tus modelos de Base Combinada y los agregaremos aquí."
+          placeholderText="¿YA TENÉS TU MODELO?"
+          placeholderDesc="Si ya tenés un modelo diseñado, envianos la foto al WhatsApp y lo hacemos."
           placeholderWide={true}
         />
 
         {/* TIRA 3: MODELOS REMERAS */}
         <ModelStripSection
           badgeTitle="MODELOS REMERAS"
-          subtitle="REMERAS Y REMERONES DE EGRESADOS"
+          subtitle="REMERAS DE EGRESADOS, OPCIÓN ESTAMPA ADELANTE Y OPCIÓN ESTAMPA DOBLE (ADELANTE Y ATRÁS)"
           models={sampleModelsRemeras}
           onOpenLightbox={openLightbox}
-          placeholderText="¡Envíanos tus fotos!"
+          placeholderText="¿YA TENÉS TU MODELO?"
+          placeholderDesc="Si ya tenés un modelo diseñado, envianos la foto al WhatsApp y lo hacemos."
         />
       </div>
 
