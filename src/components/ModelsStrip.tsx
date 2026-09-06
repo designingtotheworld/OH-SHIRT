@@ -122,6 +122,27 @@ const sampleModelsLisas: ModelItem[] = [
     backUrl: "https://i.imgur.com/KpMa5f5.jpeg",
     title: "Modelo 17",
     subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-18",
+    url: "https://i.imgur.com/lmKkQrp.jpeg",
+    backUrl: "https://i.imgur.com/YzKKs3b.jpeg",
+    title: "Modelo 18",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-19",
+    url: "https://i.imgur.com/Ko28LvO.jpeg",
+    backUrl: "https://i.imgur.com/C9p9ezn.jpeg",
+    title: "Modelo 19",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-20",
+    url: "https://i.imgur.com/vD7psGf.jpeg",
+    backUrl: "https://i.imgur.com/6FqksNq.jpeg",
+    title: "Modelo 20",
+    subtitle: "Buzo Egresados (BASE LISA)"
   }
 ];
 
@@ -165,6 +186,13 @@ const sampleModelsCombinadas: ModelItem[] = [
     id: "comb-6",
     url: "https://i.imgur.com/Soda9rr.png",
     title: "Modelo 6 (Combinado)",
+    subtitle: "Buzo Egresados (BASE COMBINADA)"
+  },
+  {
+    id: "comb-7",
+    url: "https://i.imgur.com/p4OufZR.jpeg",
+    backUrl: "https://i.imgur.com/qi6PvXv.jpeg",
+    title: "Modelo 7 (Combinado)",
     subtitle: "Buzo Egresados (BASE COMBINADA)"
   }
 ];
@@ -458,6 +486,7 @@ function ModelStripSection({
             </p>
           </div>
         </div>
+
       </div>
     </div>
   );
@@ -514,7 +543,7 @@ export function ModelsStrip() {
 
         {/* TIRA 1: BASE LISA */}
         <ModelStripSection
-          badgeTitle="CAMPERA / BUZO BASE LISA"
+          badgeTitle="CAMPERA/ BUZO BASE LISA"
           subtitle="Modelos de color liso en el cuerpo principal"
           models={sampleModelsLisas}
           onOpenLightbox={openLightbox}
@@ -524,7 +553,7 @@ export function ModelsStrip() {
 
         {/* TIRA 2: BASE COMBINADA */}
         <ModelStripSection
-          badgeTitle="MODELOS BASE COMBINADA"
+          badgeTitle="CAMPERA/BUZO BASE COMBINADA"
           subtitle="MODELOS COMBINADOS CON RECORTES O RAYAS/VIVOS"
           models={sampleModelsCombinadas}
           onOpenLightbox={openLightbox}
