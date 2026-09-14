@@ -143,6 +143,20 @@ const sampleModelsLisas: ModelItem[] = [
     backUrl: "https://i.imgur.com/6FqksNq.jpeg",
     title: "Modelo 20",
     subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-21",
+    url: "https://i.imgur.com/tRv8Cgx.png",
+    backUrl: "https://i.imgur.com/hRnk1Ji.png",
+    title: "Modelo 21",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-22",
+    url: "https://i.imgur.com/HbbyPrr.png",
+    backUrl: "https://i.imgur.com/BuuqEhK.png",
+    title: "Modelo 22",
+    subtitle: "Buzo Egresados (BASE LISA)"
   }
 ];
 
