@@ -335,6 +335,64 @@ const sampleModelsRemeras: ModelItem[] = [
   }
 ];
 
+// Lista de modelos Remeritas Jardín
+const sampleModelsJardin: ModelItem[] = [
+  {
+    id: "jar-1",
+    url: "https://i.imgur.com/04lTSZx.jpeg",
+    title: "Modelo 1 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-2",
+    url: "https://i.imgur.com/Y8cqOts.jpeg",
+    title: "Modelo 2 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-3",
+    url: "https://i.imgur.com/jsflfQY.jpeg",
+    title: "Modelo 3 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-4",
+    url: "https://i.imgur.com/kyiHXTG.jpeg",
+    title: "Modelo 4 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-5",
+    url: "https://i.imgur.com/jxHqwud.jpeg",
+    title: "Modelo 5 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-6",
+    url: "https://i.imgur.com/OfkE6Y3.jpeg",
+    title: "Modelo 6 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-7",
+    url: "https://i.imgur.com/nafxCOS.jpeg",
+    title: "Modelo 7 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-8",
+    url: "https://i.imgur.com/rj6TF8C.jpeg",
+    title: "Modelo 8 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-9",
+    url: "https://i.imgur.com/CUBkC5h.jpeg",
+    title: "Modelo 9 (Jardín)",
+    subtitle: "Remerita Jardín"
+  }
+];
+
 interface ModelStripSectionProps {
   badgeTitle: string;
   subtitle: string;
@@ -343,6 +401,7 @@ interface ModelStripSectionProps {
   placeholderText: string;
   placeholderDesc?: string;
   placeholderWide?: boolean;
+  badgeWhite?: boolean;
 }
 
 function ModelStripSection({
@@ -352,7 +411,8 @@ function ModelStripSection({
   onOpenLightbox,
   placeholderText,
   placeholderDesc,
-  placeholderWide = false
+  placeholderWide = false,
+  badgeWhite = false
 }: ModelStripSectionProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -398,7 +458,7 @@ function ModelStripSection({
     <div className="pt-8 border-t border-neutral-900 first:border-0 first:pt-0">
       {/* Encabezado con Insignia Estilizada */}
       <div className="flex flex-wrap items-center gap-3 mb-5">
-        <span className="bg-yellow-400 text-black text-sm sm:text-base font-anton px-4 py-2 rounded-lg tracking-wider uppercase shadow-md border border-yellow-300">
+        <span className={`${badgeWhite ? "bg-white text-black border-neutral-300" : "bg-yellow-400 text-black border-yellow-300"} text-sm sm:text-base font-anton px-4 py-2 rounded-lg tracking-wider uppercase shadow-md border`}>
           {badgeTitle}
         </span>
         <span className="text-neutral-300 text-xs sm:text-sm font-sans tracking-wide">
@@ -584,6 +644,17 @@ export function ModelsStrip() {
           onOpenLightbox={openLightbox}
           placeholderText="¿YA TENÉS TU MODELO?"
           placeholderDesc="Si ya tenés un modelo diseñado, envianos la foto al WhatsApp y lo hacemos."
+        />
+
+        {/* TIRA 4: MODELOS REMERITAS JARDIN */}
+        <ModelStripSection
+          badgeTitle="MODELOS REMERITAS JARDIN"
+          subtitle="PRENDAS Y DISEÑOS ESPECIALES PARA JARDÍN DE INFANTES"
+          models={sampleModelsJardin}
+          onOpenLightbox={openLightbox}
+          placeholderText="¿YA TENÉS TU MODELO?"
+          placeholderDesc="Envianos la foto al WhatsApp y lo hacemos."
+          badgeWhite={true}
         />
       </div>
 
