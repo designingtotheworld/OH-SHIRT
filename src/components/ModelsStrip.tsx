@@ -11,7 +11,7 @@ export interface ModelItem {
 }
 
 // Lista de modelos Base Lisa
-const sampleModelsLisas: ModelItem[] = [
+export const sampleModelsLisas: ModelItem[] = [
   {
     id: "mod-13",
     url: "https://i.imgur.com/n7WnaYp.png",
@@ -161,7 +161,7 @@ const sampleModelsLisas: ModelItem[] = [
 ];
 
 // Lista de modelos Base Combinada
-const sampleModelsCombinadas: ModelItem[] = [
+export const sampleModelsCombinadas: ModelItem[] = [
   {
     id: "comb-1",
     url: "https://i.imgur.com/FSovYhc.png",

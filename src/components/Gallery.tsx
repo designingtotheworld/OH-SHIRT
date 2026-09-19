@@ -1,18 +1,9 @@
 import { ImageCarousel } from "./ImageCarousel";
+import { sampleModelsLisas, sampleModelsCombinadas } from "./ModelsStrip";
 
-// Lista de imágenes proporcionadas por el usuario para el primer carrusel
-const unicolorImages: { url: string; title?: string }[] = [
-  { url: "https://i.imgur.com/LEWSHD0.png" },
-  { url: "https://i.imgur.com/so6u3o7.png" },
-  { url: "https://i.imgur.com/9DttrdT.png" },
-  { url: "https://i.imgur.com/cYPI0Bh.png" },
-];
-
-const combinadasImages: { url: string; title?: string }[] = [
-  { url: "https://i.imgur.com/jRz2OxX.png" },
-  { url: "https://i.imgur.com/IGIEAlQ.png" },
-  { url: "https://i.imgur.com/pUysV2Z.png" },
-];
+// Sincronizado con todos los modelos de buzos lisos y combinados
+const unicolorImages = sampleModelsLisas.map(m => ({ url: m.url, title: m.title }));
+const combinadasImages = sampleModelsCombinadas.map(m => ({ url: m.url, title: m.title }));
 
 export function Gallery() {
   return (
