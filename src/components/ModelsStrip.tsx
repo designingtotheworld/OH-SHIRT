@@ -13,6 +13,13 @@ export interface ModelItem {
 // Lista de modelos Base Lisa
 export const sampleModelsLisas: ModelItem[] = [
   {
+    id: "mod-23",
+    url: "https://i.imgur.com/7XYyrN8.jpeg",
+    backUrl: "https://i.imgur.com/HSEEONB.jpeg",
+    title: "Modelo 23",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
     id: "mod-13",
     url: "https://i.imgur.com/n7WnaYp.png",
     backUrl: "https://i.imgur.com/Da40dDt.png",
@@ -162,6 +169,19 @@ export const sampleModelsLisas: ModelItem[] = [
 
 // Lista de modelos Base Combinada
 export const sampleModelsCombinadas: ModelItem[] = [
+  {
+    id: "comb-9",
+    url: "https://i.imgur.com/EF0THZT.jpeg",
+    title: "Modelo 9 (Combinado)",
+    subtitle: "Buzo Egresados (BASE COMBINADA)"
+  },
+  {
+    id: "comb-8",
+    url: "https://i.imgur.com/ZYbXaEl.jpeg",
+    backUrl: "https://i.imgur.com/PomUSVk.jpeg",
+    title: "Modelo 8 (Combinado)",
+    subtitle: "Buzo Egresados (BASE COMBINADA)"
+  },
   {
     id: "comb-1",
     url: "https://i.imgur.com/FSovYhc.png",
