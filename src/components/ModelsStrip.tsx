@@ -170,6 +170,12 @@ export const sampleModelsLisas: ModelItem[] = [
 // Lista de modelos Base Combinada
 export const sampleModelsCombinadas: ModelItem[] = [
   {
+    id: "comb-10",
+    url: "https://i.imgur.com/YX1sSuS.jpeg",
+    title: "Modelo 10 (Combinado)",
+    subtitle: "Buzo Egresados (BASE COMBINADA)"
+  },
+  {
     id: "comb-9",
     url: "https://i.imgur.com/EF0THZT.jpeg",
     title: "Modelo 9 (Combinado)",
@@ -410,10 +416,85 @@ const sampleModelsJardin: ModelItem[] = [
     url: "https://i.imgur.com/CUBkC5h.jpeg",
     title: "Modelo 9 (Jardín)",
     subtitle: "Remerita Jardín"
+  },
+  {
+    id: "jar-10",
+    url: "https://i.imgur.com/0S3jVy1.jpeg",
+    backUrl: "https://i.imgur.com/BadfcNT.jpeg",
+    title: "Modelo 10 (Jardín)",
+    subtitle: "Remerita Jardín"
+  }
+];
+
+// Lista de modelos Buzos y Camperas Jardín
+const sampleModelsBuzosJardin: ModelItem[] = [
+  {
+    id: "bj-1",
+    url: "https://i.imgur.com/ycXEBKr.jpeg",
+    backUrl: "https://i.imgur.com/Jx0SllB.jpeg",
+    title: "Modelo 1",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-2",
+    url: "https://i.imgur.com/L8RGO90.jpeg",
+    backUrl: "https://i.imgur.com/YKSIX6G.jpeg",
+    title: "Modelo 2",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-3",
+    url: "https://i.imgur.com/4NuMQMr.jpeg",
+    backUrl: "https://i.imgur.com/8Km8ZIT.jpeg",
+    title: "Modelo 3",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-4",
+    url: "https://i.imgur.com/LESznu2.jpeg",
+    backUrl: "https://i.imgur.com/qQ20ZAp.jpeg",
+    title: "Modelo 4",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-5",
+    url: "https://i.imgur.com/mynozys.jpeg",
+    backUrl: "https://i.imgur.com/b8vDFUy.jpeg",
+    title: "Modelo 5",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-6",
+    url: "https://i.imgur.com/rT5JM6v.png",
+    backUrl: "https://i.imgur.com/dDhRJrY.png",
+    title: "Modelo 6",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-7",
+    url: "https://i.imgur.com/xBhcTqy.jpeg",
+    backUrl: "https://i.imgur.com/2g93Ty2.jpeg",
+    title: "Modelo 7",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-8",
+    url: "https://i.imgur.com/Cd0LBfV.jpeg",
+    backUrl: "https://i.imgur.com/BjSJfUB.jpeg",
+    title: "Modelo 8",
+    subtitle: "Buzo o Campera Jardín"
+  },
+  {
+    id: "bj-9",
+    url: "https://i.imgur.com/jDtPLza.jpeg",
+    backUrl: "https://i.imgur.com/1ArkKmq.jpeg",
+    title: "Modelo 9",
+    subtitle: "Buzo o Campera Jardín"
   }
 ];
 
 interface ModelStripSectionProps {
+  id?: string;
   badgeTitle: string;
   subtitle: string;
   models: ModelItem[];
@@ -425,6 +506,7 @@ interface ModelStripSectionProps {
 }
 
 function ModelStripSection({
+  id,
   badgeTitle,
   subtitle,
   models,
@@ -475,7 +557,7 @@ function ModelStripSection({
   };
 
   return (
-    <div className="pt-8 border-t border-neutral-900 first:border-0 first:pt-0">
+    <div id={id} className="pt-8 border-t border-neutral-900 first:border-0 first:pt-0">
       {/* Encabezado con Insignia Estilizada */}
       <div className="flex flex-wrap items-center gap-3 mb-5">
         <span className={`${badgeWhite ? "bg-white text-black border-neutral-300" : "bg-yellow-400 text-black border-yellow-300"} text-sm sm:text-base font-anton px-4 py-2 rounded-lg tracking-wider uppercase shadow-md border`}>
@@ -541,24 +623,14 @@ function ModelStripSection({
               )}
 
               {model.backUrl && (
-                <div className="absolute top-2 left-2 bg-black/70 px-2 py-0.5 rounded-full text-[9px] font-mono text-yellow-400 border border-yellow-400/30 backdrop-blur-xs">
+                <div className="absolute top-2 left-2 bg-black/70 px-2 py-0.5 rounded-full text-[9px] font-mono text-yellow-400 border border-yellow-400/30 backdrop-blur-xs z-10">
                   <span className="group-hover/card:hidden">FRENTE</span>
                   <span className="hidden group-hover/card:inline">ESPALDA</span>
                 </div>
               )}
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-2.5 text-left">
-                <span className="text-xs font-anton text-yellow-400 tracking-wider uppercase truncate">
-                  {model.title || `Modelo ${idx + 1}`}
-                </span>
-                {model.subtitle && (
-                  <span className="text-[9px] text-neutral-300 font-sans truncate leading-tight">
-                    {model.subtitle}
-                  </span>
-                )}
-                <div className="absolute top-2 right-2 bg-black/60 p-1.5 rounded-full text-white backdrop-blur-xs">
-                  <Maximize2 className="w-3.5 h-3.5 text-yellow-400" />
-                </div>
+              <div className="absolute top-2 right-2 bg-black/60 p-1.5 rounded-full text-white backdrop-blur-xs opacity-0 group-hover/card:opacity-100 transition-opacity z-10">
+                <Maximize2 className="w-3.5 h-3.5 text-yellow-400" />
               </div>
             </motion.div>
           ))}
@@ -668,9 +740,21 @@ export function ModelsStrip() {
 
         {/* TIRA 4: MODELOS REMERITAS JARDIN */}
         <ModelStripSection
+          id="modelos-jardin"
           badgeTitle="MODELOS REMERITAS JARDIN"
           subtitle="PRENDAS Y DISEÑOS ESPECIALES PARA JARDÍN DE INFANTES"
           models={sampleModelsJardin}
+          onOpenLightbox={openLightbox}
+          placeholderText="¿YA TENÉS TU MODELO?"
+          placeholderDesc="Envianos la foto al WhatsApp y lo hacemos."
+          badgeWhite={true}
+        />
+
+        {/* TIRA 5: BUZOS Y CAMPERAS JARDIN */}
+        <ModelStripSection
+          badgeTitle="BUZOS Y CAMPERAS JARDIN"
+          subtitle="ABRIGOS Y DISEÑOS ESPECIALES PARA JARDÍN DE INFANTES"
+          models={sampleModelsBuzosJardin}
           onOpenLightbox={openLightbox}
           placeholderText="¿YA TENÉS TU MODELO?"
           placeholderDesc="Envianos la foto al WhatsApp y lo hacemos."
@@ -702,7 +786,7 @@ export function ModelsStrip() {
               </button>
 
               {/* Imagen ampliada */}
-              <div className="relative w-full max-h-[70vh] aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-2xl flex items-center justify-center">
+              <div className="relative w-full max-h-[60vh] aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-2xl flex items-center justify-center">
                 <img
                   src={
                     activeSide === "back" && currentItem.backUrl
@@ -712,46 +796,46 @@ export function ModelsStrip() {
                   alt={currentItem.title || "Modelo ampliado"}
                   className="w-full h-full object-contain"
                 />
+              </div>
 
-                {/* Título y selector Frente/Espalda en lightbox */}
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-4 flex flex-col items-center text-center gap-2">
-                  <div>
-                    <p className="font-anton text-lg sm:text-xl text-yellow-400 tracking-wide">
-                      {currentItem.title}
+              {/* Título y selector Frente/Espalda fuera de la imagen */}
+              <div className="mt-4 flex flex-col items-center text-center gap-2">
+                <div>
+                  <p className="font-anton text-lg sm:text-xl text-yellow-400 tracking-wide">
+                    {currentItem.title}
+                  </p>
+                  {currentItem.subtitle && (
+                    <p className="text-xs text-neutral-300 font-sans">
+                      {currentItem.subtitle}
                     </p>
-                    {currentItem.subtitle && (
-                      <p className="text-xs text-neutral-300 font-sans">
-                        {currentItem.subtitle}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Toggle Frente / Espalda si tiene foto trasera */}
-                  {currentItem.backUrl && (
-                    <div className="flex gap-2 bg-neutral-900/80 p-1 rounded-full border border-neutral-700">
-                      <button
-                        onClick={() => setActiveSide("front")}
-                        className={`px-4 py-1 rounded-full text-xs font-sans font-medium transition-colors cursor-pointer ${
-                          activeSide === "front"
-                            ? "bg-yellow-400 text-black font-semibold"
-                            : "text-neutral-400 hover:text-white"
-                        }`}
-                      >
-                        Ver Frente
-                      </button>
-                      <button
-                        onClick={() => setActiveSide("back")}
-                        className={`px-4 py-1 rounded-full text-xs font-sans font-medium transition-colors cursor-pointer ${
-                          activeSide === "back"
-                            ? "bg-yellow-400 text-black font-semibold"
-                            : "text-neutral-400 hover:text-white"
-                        }`}
-                      >
-                        Ver Espalda
-                      </button>
-                    </div>
                   )}
                 </div>
+
+                {/* Toggle Frente / Espalda si tiene foto trasera */}
+                {currentItem.backUrl && (
+                  <div className="flex gap-2 bg-neutral-900 p-1.5 rounded-full border border-neutral-700 shadow-md">
+                    <button
+                      onClick={() => setActiveSide("front")}
+                      className={`px-4 py-1.5 rounded-full text-xs font-sans font-medium transition-colors cursor-pointer ${
+                        activeSide === "front"
+                          ? "bg-yellow-400 text-black font-semibold"
+                          : "text-neutral-300 hover:text-white"
+                      }`}
+                    >
+                      Ver Frente
+                    </button>
+                    <button
+                      onClick={() => setActiveSide("back")}
+                      className={`px-4 py-1.5 rounded-full text-xs font-sans font-medium transition-colors cursor-pointer ${
+                        activeSide === "back"
+                          ? "bg-yellow-400 text-black font-semibold"
+                          : "text-neutral-300 hover:text-white"
+                      }`}
+                    >
+                      Ver Espalda
+                    </button>
+                  </div>
+                )}
               </div>
 
               {/* Botones de navegación previa / siguiente */}
