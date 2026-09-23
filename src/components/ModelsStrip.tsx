@@ -378,6 +378,12 @@ const sampleModelsRemeras: ModelItem[] = [
 // Lista de modelos Remeritas Jardín
 const sampleModelsJardin: ModelItem[] = [
   {
+    id: "jar-12",
+    url: "https://i.imgur.com/fHz9HOA.jpeg",
+    title: "Modelo 12 (Jardín)",
+    subtitle: "Remerita Jardín"
+  },
+  {
     id: "jar-11",
     url: "https://i.imgur.com/kKpL7vx.jpeg",
     title: "Modelo 11 (Jardín)",
