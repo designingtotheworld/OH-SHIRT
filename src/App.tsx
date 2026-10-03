@@ -5,6 +5,7 @@ import { Gallery } from "./components/Gallery";
 import { MiraModelosBanner } from "./components/MiraModelosBanner";
 import { FAQ } from "./components/FAQ";
 import { ModelsStrip } from "./components/ModelsStrip";
+import { PolaroidGallery } from "./components/PolaroidGallery";
 import { Footer } from "./components/Footer";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       <MiraModelosBanner />
       <FAQ />
       <ModelsStrip />
+      <PolaroidGallery />
       <Footer />
     </div>
   );

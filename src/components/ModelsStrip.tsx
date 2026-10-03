@@ -13,6 +13,27 @@ export interface ModelItem {
 // Lista de modelos Base Lisa
 export const sampleModelsLisas: ModelItem[] = [
   {
+    id: "mod-27",
+    url: "https://i.imgur.com/iCTg9w2.jpeg",
+    backUrl: "https://i.imgur.com/gnAYYjH.jpeg",
+    title: "Modelo 27",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-26",
+    url: "https://i.imgur.com/ajNLVP2.jpeg",
+    backUrl: "https://i.imgur.com/GfPKXFE.jpeg",
+    title: "Modelo 26",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
+    id: "mod-25",
+    url: "https://i.imgur.com/qrXdtRD.jpeg",
+    backUrl: "https://i.imgur.com/NLWEAfM.jpeg",
+    title: "Modelo 25",
+    subtitle: "Buzo Egresados (BASE LISA)"
+  },
+  {
     id: "mod-24",
     url: "https://i.imgur.com/9lBwxPg.jpeg",
     backUrl: "https://i.imgur.com/GGXSEml.jpeg",
@@ -249,6 +270,11 @@ export const sampleModelsCombinadas: ModelItem[] = [
     title: "Modelo 7 (Combinado)",
     subtitle: "Buzo Egresados (BASE COMBINADA)"
   }
+];
+
+// Lista de fotos reales de trabajos realizados
+export const sampleModelsReales: ModelItem[] = [
+  // Envíanos tus fotos reales para agregarlas aquí
 ];
 
 // Lista de modelos Remeras
@@ -752,6 +778,17 @@ export function ModelsStrip() {
           placeholderText="¿YA TENÉS TU MODELO?"
           placeholderDesc="Si ya tenés un modelo diseñado, envianos la foto al WhatsApp y lo hacemos."
           placeholderWide={true}
+        />
+
+        {/* TIRA FOTOS REALES / TRABAJOS REALIZADOS */}
+        <ModelStripSection
+          id="fotos-reales"
+          badgeTitle="FOTOS REALES DE TRABAJOS"
+          subtitle="FOTOS DE BUZOS Y CAMPERAS REALES FABRICADAS PARA EGRESADOS"
+          models={sampleModelsReales}
+          onOpenLightbox={openLightbox}
+          placeholderText="¿QUERÉS SUBIR TUS FOTOS?"
+          placeholderDesc="Envianos las fotos reales de tus camperas terminadas al WhatsApp y las publicamos."
         />
 
         {/* TIRA 3: MODELOS REMERAS */}
