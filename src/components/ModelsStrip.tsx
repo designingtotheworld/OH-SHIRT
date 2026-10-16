@@ -198,6 +198,18 @@ export const sampleModelsLisas: ModelItem[] = [
 // Lista de modelos Base Combinada
 export const sampleModelsCombinadas: ModelItem[] = [
   {
+    id: "comb-13",
+    url: "https://i.imgur.com/6VCaYXZ.jpeg",
+    title: "Modelo 13 (Combinado)",
+    subtitle: "Buzo Egresados (BASE COMBINADA)"
+  },
+  {
+    id: "comb-12",
+    url: "https://i.imgur.com/Hd6fjLi.jpeg",
+    title: "Modelo 12 (Combinado)",
+    subtitle: "Buzo Egresados (BASE COMBINADA)"
+  },
+  {
     id: "comb-11",
     url: "https://i.imgur.com/4Bln1br.jpeg",
     backUrl: "https://i.imgur.com/hoHXvDj.jpeg",

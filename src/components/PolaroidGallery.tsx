@@ -114,14 +114,13 @@ export function PolaroidGallery() {
   return (
     <section className="py-16 bg-neutral-950 border-t border-neutral-900 text-white relative overflow-hidden" id="fotos-reales">
       <div className="max-w-7xl mx-auto px-4">
+
+
         {/* Header de la sección */}
         <div className="text-center mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-anton text-white uppercase tracking-wide">
-            FOTOS REALES
+            EGRESADOS DE OH SHIRT ARGENTINA
           </h2>
-          <p className="mt-2 text-neutral-400 font-sans text-xs sm:text-sm max-w-md mx-auto uppercase tracking-wide">
-            EGRESADOS DE OH SHIRT
-          </p>
         </div>
 
         {/* Cuadrícula de fotos Polaroid */}
@@ -133,7 +132,7 @@ export function PolaroidGallery() {
               initial={{ rotate: (index % 2 === 0 ? 1 : -1) * ((index % 3) + 1) }}
               transition={{ type: "spring", stiffness: 350, damping: 20 }}
               onClick={() => setSelectedImage(item)}
-              className="bg-white text-neutral-900 p-3 pb-8 rounded-sm shadow-xl cursor-pointer relative group border border-neutral-200"
+              className="bg-white text-neutral-900 p-3 rounded-sm shadow-xl cursor-pointer relative group border border-neutral-200"
             >
               <div className="relative aspect-[4/5] bg-neutral-100 overflow-hidden shadow-inner border border-neutral-200">
                 <img
@@ -145,11 +144,6 @@ export function PolaroidGallery() {
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Maximize2 className="w-6 h-6 text-yellow-400 drop-shadow-md" />
                 </div>
-              </div>
-
-              <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-[11px] text-neutral-700 font-sans font-medium">
-                <span className="truncate">{item.title}</span>
-                <span className="font-mono text-[10px] text-neutral-400">#{index + 1}</span>
               </div>
             </motion.div>
           ))}

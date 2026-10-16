@@ -1,4 +1,4 @@
-import { Instagram, Star } from "lucide-react";
+import { Instagram, Star, Sparkles } from "lucide-react";
 
 export function TopBar() {
   const links = [
@@ -13,6 +13,12 @@ export function TopBar() {
       icon: Star,
       url: "https://www.google.com/maps/place/OH+SHIRT+ARGENTINA/@-34.45242,-58.8680416,17z/data=!4m8!3m7!1s0x95bb61730a3b92bd:0x6d150247425ede3b!8m2!3d-34.45242!4d-58.865472!9m1!1b1!16s%2Fg%2F11vbzy3w5x?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
       color: "bg-neutral-900 text-white hover:bg-amber-400 hover:text-black border-neutral-800",
+    },
+    {
+      name: "FOTOS REALES PRENDAS",
+      icon: Sparkles,
+      url: "#fotos-reales",
+      color: "bg-neutral-800 text-neutral-200 hover:bg-neutral-700 hover:text-white border-neutral-700",
     },
   ];
 
